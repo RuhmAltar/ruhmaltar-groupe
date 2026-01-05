@@ -1,93 +1,106 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ruhmaltar Groupe</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0f0f0f;
-      color: white;
-      line-height: 1.6;
-    }
-
-    header {
-      text-align: center;
-      padding: 60px 20px;
-      background: #1a1a1a;
-    }
-
-    /* ====== LOGO : TU BOUGES ICI ====== */
-    .logo {
-      width: 180px;          /* 🔍 Taille du logo */
-      margin-top: 20px;      /* ⬇️ Haut / Bas (augmente = descend) */
-      margin-left: 0px;      /* ➡️ Gauche / Droite (augmente = va à droite) */
-      margin-bottom: 20px;
-    }
-    /* ================================= */
-
-    h1 {
-      margin: 10px 0;
-    }
-
-    .slogan {
-      color: #bbbbbb;
-      margin-bottom: 25px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #25D366;
-      color: black;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: black;
-      color: #aaa;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ruhmaltar Groupe</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#0b0b0f;
+  color:#fff;
+}
+header{
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  text-align:center;
+  padding:80px 20px;
+}
+.logo-move{
+  width:180px;
+  margin-top:10px;
+  transition:all .3s ease;
+}
+header h1{
+  font-size:42px;
+  margin:20px 0 10px;
+}
+header p{
+  font-size:18px;
+  opacity:.9;
+}
+.btn{
+  display:inline-block;
+  margin:15px 10px;
+  padding:14px 28px;
+  background:#ffd700;
+  color:#000;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+}
+section{
+  padding:80px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+section h2{
+  text-align:center;
+  font-size:34px;
+  margin-bottom:40px;
+}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.card{
+  background:#16161d;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+.card h3{color:#ffd700;}
+.slider{
+  overflow:hidden;
+  position:relative;
+}
+.slides{
+  display:flex;
+  animation:slide 18s infinite;
+}
+.slide{
+  min-width:100%;
+  text-align:center;
+}
+@keyframes slide{
+  0%{transform:translateX(0)}
+  30%{transform:translateX(0)}
+  33%{transform:translateX(-100%)}
+  63%{transform:translateX(-100%)}
+  66%{transform:translateX(-200%)}
+  100%{transform:translateX(-200%)}
+}
+footer{
+  background:#050507;
+  text-align:center;
+  padding:40px 20px;
+  font-size:14px;
+}
+</style>
 </head>
-
 <body>
 
-  <header>
-    <!-- LOGO -->
-    <img src="logo.png" alt="Logo Ruhmaltar Groupe" class="logo">
+<header>
+  <img src="logo.png" alt="Logo Ruhmaltar Groupe" class="logo-move">
+  <h1>Ruhmaltar Groupe</h1>
+  <p>Structure artistique & entrepreneuriale – Vision, Excellence & Impact</p>
+  <a class="btn" href="https://wa.me/242053996715">WhatsApp</a>
+  <a class="btn" href="mailto:contact@ruhmaltar.com">Email</a>
+</header>
 
-    <h1>Ruhmaltar Groupe</h1>
-    <p class="slogan">Élever les talents. Structurer la vision. Créer un impact durable.</p>
-
-    <a class="btn" href="https://wa.me/242053996715" target="_blank">
-      Nous contacter sur WhatsApp
-    </a>
-  </header>
-
-  <section>
-    <h2>À propos</h2>
-    <p>
-      Ruhmaltar Groupe est une structure alliant label musical et projets business,
-      avec une vision axée sur l’excellence, la croissance et l’impact durable.
-    </p>
-  </section>
-
-  <footer>
-    © 2026 Ruhmaltar Groupe – Tous droits réservés
-  </footer>
-
-</body>
-</html>
+<section>
+<h2>À propos de nous</h2>
+<p style="text-align:center;max-width:800px;margin:auto;">Ruhmaltar Groupe est une structure polyvalente dédiée à la musique, à la création artistique, à l’événementiel et aux projets innovants. Nous bâtissons des ponts entre la foi, la culture et l’entrepreneuriat moderne.</p>
+<
