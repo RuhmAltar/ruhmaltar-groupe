@@ -3,140 +3,202 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ruhmaltar Groupe</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Ruhmaltar Groupe | Groupe Structuré & Évolutif</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+:root{
+  --gold:#f5c542;
+  --dark:#07070c;
+  --dark2:#12121a;
+  --light:#ffffff;
+  --muted:#b6b6c4;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
 body{
   margin:0;
   font-family:'Poppins',sans-serif;
-  background:#0b0b0f;
-  color:#fff;
+  background:linear-gradient(180deg,#050509,#0b0b14);
+  color:var(--light);
 }
+/* NAVIGATION */
+nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:1000;
+  background:rgba(5,5,9,.75);
+  backdrop-filter:blur(12px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 40px;
+}
+nav strong{font-weight:700;letter-spacing:.5px}
+nav a{
+  color:var(--light);
+  margin:0 14px;
+  text-decoration:none;
+  font-weight:500;
+  opacity:.85;
+}
+nav a:hover{opacity:1;color:var(--gold)}
+
+/* HERO */
 header{
-  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
-  padding:80px 20px;
+  padding:140px 20px 60px;
+  background:
+    radial-gradient(circle at top,#1b1b2f,#050509 70%),
+    linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 }
-.logo-move{
-  width:180px;
-  margin-top:10px;
-  transition:all .3s ease;
-}
-header h1{
-  font-size:42px;
-  margin:20px 0 10px;
-}
-header p{
-  font-size:18px;
-  opacity:.9;
-}
+.hero{max-width:950px}
+.logo{width:190px;margin-bottom:30px}
+.hero h1{font-size:clamp(46px,6vw,70px);margin:0}
+.hero p{font-size:20px;color:var(--muted)}
 .btn{
   display:inline-block;
-  margin:15px 10px;
-  padding:14px 28px;
-  background:#ffd700;
+  margin:18px 12px;
+  padding:18px 42px;
+  border-radius:50px;
+  background:linear-gradient(135deg,var(--gold),#ffdf7e);
   color:#000;
-  border-radius:30px;
   font-weight:600;
   text-decoration:none;
+  box-shadow:0 18px 40px rgba(245,197,66,.35);
 }
-section{
-  padding:80px 20px;
-  max-width:1100px;
-  margin:auto;
+.btn.alt{
+  background:transparent;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.35);
+  box-shadow:none;
 }
-section h2{
-  text-align:center;
-  font-size:34px;
-  margin-bottom:40px;
-}
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
+section{padding:130px 20px;max-width:1350px;margin:auto}
+.section-title{text-align:center;max-width:950px;margin:0 auto 100px}
+.section-title h2{font-size:46px;margin-bottom:20px}
+.section-title p{color:var(--muted);font-size:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:45px}
 .card{
-  background:#16161d;
-  padding:30px;
-  border-radius:18px;
-  box-shadow:0 10px 25px rgba(0,0,0,.4);
+  background:linear-gradient(180deg,var(--dark2),#0d0d16);
+  padding:45px;
+  border-radius:28px;
+  box-shadow:0 35px 70px rgba(0,0,0,.5);
 }
-.card h3{color:#ffd700;}
-.slider{
-  overflow:hidden;
-  position:relative;
-}
-.slides{
-  display:flex;
-  animation:slide 18s infinite;
-}
-.slide{
-  min-width:100%;
-  text-align:center;
-}
+.card h3{color:var(--gold)}
+
+/* DIAPO */
+.slider{overflow:hidden;border-radius:32px}
+.slides{display:flex;animation:slide 22s infinite}
+.slide{min-width:100%;padding:90px 70px;text-align:center;background:linear-gradient(135deg,#1a1a2a,#0b0b14)}
+.slide p{font-size:22px}
 @keyframes slide{
-  0%{transform:translateX(0)}
-  30%{transform:translateX(0)}
-  33%{transform:translateX(-100%)}
-  63%{transform:translateX(-100%)}
-  66%{transform:translateX(-200%)}
-  100%{transform:translateX(-200%)}
+  0%,25%{transform:translateX(0)}
+  33%,58%{transform:translateX(-100%)}
+  66%,100%{transform:translateX(-200%)}
+}
+.callout{
+  background:radial-gradient(circle at top,var(--gold),#a17c10);
+  color:#000;
+  border-radius:50px;
+  padding:100px 40px;
+  text-align:center;
 }
 footer{
-  background:#050507;
+  background:#030306;
+  padding:70px 20px;
   text-align:center;
-  padding:40px 20px;
-  font-size:14px;
+  color:var(--muted);
 }
 </style>
 </head>
 <body>
 
-<header>
-  <img src="logo.png" alt="Logo Ruhmaltar Groupe" class="logo-move">
-  <h1>Ruhmaltar Groupe</h1>
-  <p>Structure artistique & entrepreneuriale – Vision, Excellence & Impact</p>
-  <a class="btn" href="https://wa.me/242053996715">WhatsApp</a>
-  <a class="btn" href="mailto:contact@ruhmaltar.com">Email</a>
+<nav>
+  <strong>Ruhmaltar Groupe</strong>
+  <div>
+    <a href="#accueil">Accueil</a>
+    <a href="#groupe">Le Groupe</a>
+    <a href="#poles">Pôles</a>
+    <a href="#projets">Projets</a>
+    <a href="#partenariats">Partenariats</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header id="accueil">
+  <div class="hero">
+    <img src="logo.png" alt="Ruhmaltar Groupe" class="logo">
+    <h1>Ruhmaltar Groupe</h1>
+    <p>Groupe structuré • Création • Foi • Entrepreneuriat • Vision long terme</p>
+    <a class="btn" href="#groupe">Découvrir le groupe</a>
+    <a class="btn alt" href="#partenariats">Entrer en relation</a>
+  </div>
 </header>
 
-<section>
-<h2>À propos de nous</h2>
-<p style="text-align:center;max-width:800px;margin:auto;">Ruhmaltar Groupe est une structure polyvalente dédiée à la musique, à la création artistique, à l’événementiel et aux projets innovants. Nous bâtissons des ponts entre la foi, la culture et l’entrepreneuriat moderne.</p>
-</section>
-
-<section>
-<h2>Nos pôles & projets</h2>
-<div class="cards">
-  <div class="card"><h3>🎵 Label Gospel</h3><p>Production, accompagnement artistique, distribution et stratégie digitale.</p></div>
-  <div class="card"><h3>🎤 Événementiel</h3><p>Organisation de concerts, showcases, événements spirituels et culturels.</p></div>
-  <div class="card"><h3>🎬 Médias & Création</h3><p>Contenus vidéo, mini-lives, branding visuel et communication.</p></div>
-  <div class="card"><h3>🚀 Projets parallèles</h3><p>Startups créatives, formation, accompagnement entrepreneurial.</p></div>
-</div>
-</section>
-
-<section>
-<h2>Témoignages</h2>
-<div class="slider">
-  <div class="slides">
-    <div class="slide"><p>« Ruhmaltar m’a permis de révéler mon potentiel artistique. »</p><strong>— Artiste</strong></div>
-    <div class="slide"><p>« Une vision claire, professionnelle et inspirante. »</p><strong>— Partenaire</strong></div>
-    <div class="slide"><p>« Excellence, foi et rigueur. Une structure sérieuse. »</p><strong>— Collaborateur</strong></div>
+<section id="groupe">
+  <div class="section-title">
+    <h2>Une structure pensée pour durer</h2>
+    <p>Ruhmaltar Groupe est conçu comme un groupe organisé aujourd’hui, avec une évolution naturelle vers un holding demain.</p>
   </div>
-</div>
+  <div class="grid">
+    <div class="card"><h3>Vision</h3><p>Bâtir un écosystème créatif et entrepreneurial capable d’impacter durablement les individus et les territoires.</p></div>
+    <div class="card"><h3>Mission</h3><p>Structurer, produire et accompagner des projets à forte valeur artistique, spirituelle et économique.</p></div>
+    <div class="card"><h3>Valeurs</h3><p>Foi, excellence, discipline, transmission, intégrité et innovation.</p></div>
+  </div>
 </section>
 
-<section>
-<h2>Appel aux partenaires</h2>
-<p style="text-align:center;max-width:850px;margin:auto;">Nous recherchons des partenaires, investisseurs, managers, sponsors et collaborateurs partageant notre vision. Ensemble, bâtissons des projets durables et impactants.</p>
-<div style="text-align:center;">
-  <a class="btn" href="https://wa.me/242068237056">Devenir partenaire</a>
-</div>
+<section id="poles">
+  <div class="section-title">
+    <h2>Nos pôles stratégiques</h2>
+    <p>Chaque pôle fonctionne comme une unité autonome intégrée au groupe.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Label & Production</h3><p>Développement d’artistes, production musicale, stratégie de diffusion.</p></div>
+    <div class="card"><h3>Événementiel</h3><p>Concerts, conférences, showcases et événements institutionnels.</p></div>
+    <div class="card"><h3>Médias & Branding</h3><p>Création de contenus, image de marque, communication digitale.</p></div>
+    <div class="card"><h3>Projets parallèles</h3><p>Formation, incubation, initiatives entrepreneuriales.</p></div>
+  </div>
+</section>
+
+<section id="projets">
+  <div class="section-title">
+    <h2>Projets & trajectoire</h2>
+    <p>Une vision progressive et structurée.</p>
+  </div>
+  <div class="slider">
+    <div class="slides">
+      <div class="slide"><p>Phase 1 : Consolidation du groupe et du label</p></div>
+      <div class="slide"><p>Phase 2 : Déploiement régional et partenariats</p></div>
+      <div class="slide"><p>Phase 3 : Transition vers un holding structuré</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="partenariats">
+  <div class="callout">
+    <h2>Partenaires & investisseurs</h2>
+    <p>Nous ouvrons des collaborations stratégiques pour construire un groupe solide et évolutif.</p>
+    <a class="btn" href="https://wa.me/242053996715">Nous contacter</a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-title">
+    <h2>Entrer en contact</h2>
+    <p>Plusieurs portes d’entrée selon votre profil.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Artistes</h3><p>Présentation de projets et candidatures.</p></div>
+    <div class="card"><h3>Partenaires</h3><p>Institutions, sponsors, managers.</p></div>
+    <div class="card"><h3>Médias</h3><p>Presse, interviews, collaborations.</p></div>
+  </div>
 </section>
 
 <footer>
-<p>© 2026 Ruhmaltar Groupe – Tous droits réservés</p>
-<p>WhatsApp : +242 05 39 96 715 | +242 06 82 37 056 | +241 76 55 98 02</p>
+  <p>© 2026 Ruhmaltar Groupe — Tous droits réservés</p>
+  <p>WhatsApp : +242 05 39 96 715 · +242 06 82 37 056 · +241 76 55 98 02</p>
 </footer>
 
 </body>
